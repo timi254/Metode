@@ -1,0 +1,47 @@
+public class Naloga16 {
+    public static int Vsota(int st){
+        int stevka=0;
+        int vsota=0;
+        while (st > 0)
+        {
+            stevka=( st % 10);
+            vsota=vsota+stevka;
+            st = st / 10;
+        }
+        return vsota;
+    }
+    public static int Max(int st){
+        int max=-2147483648;
+        int stevka=0;
+        while (st > 0)
+        {
+            stevka=( st % 10);
+            if(stevka>max)
+            {
+                max=stevka;
+            }
+            st = st / 10;
+        }
+        return max;
+    }
+    public static int Min(int st){
+        int min=2147483647;
+        int stevka=0;
+        while (st > 0)
+        {
+            stevka=( st % 10);
+            if(stevka<min)
+            {
+                min=stevka;
+            }
+            st = st / 10;
+        }
+        return min;
+    }
+    public static void main(String[] args) {
+        int st=167;
+        System.out.println(Vsota(st));
+        System.out.println(Max(st));
+        System.out.println(Min(st));
+    }
+}
