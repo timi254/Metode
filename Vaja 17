@@ -1,0 +1,17 @@
+public class Naloga17 {
+    static double inch=50;
+    static double metre=50;
+    public static double Metre(double metre){
+        double metr1=inch*0.0254;
+        return metr1;
+    }
+    public static double Inch(double inch){
+        double inch1=metre*2.54; 
+        return inch1;
+    }
+    public static void main(String[] args) {
+        
+        System.out.println(Metre(metre));
+        System.out.println(Inch(inch));
+    }
+}
