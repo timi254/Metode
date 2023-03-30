@@ -1,0 +1,17 @@
+public class Naloga3 {
+    public static String najdaljsiNiz(String[]tab){
+        String najdaljsi="";
+        for(int i=0;i<tab.length;i++)
+        {
+            if(tab[i].length()>najdaljsi.length())
+            {
+                najdaljsi=tab[i];
+            }
+        }
+        return najdaljsi;
+    }
+    public static void main(String[] args) {
+        String[]tab={"rfkodeok","frrfwdrggrh","Fsggsrgrhet","gedrhtdjthtjfj"};
+        System.out.println(najdaljsiNiz(tab));
+    }
+}
