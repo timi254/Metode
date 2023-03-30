@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Naloga5 {
+    public static boolean jeSteviloDeljivoS3in4(int x){
+        return x%3==0&&x%4==0;
+    }
+    public static int vsotaStevilTab(int[] tab){
+        int vs=0;
+        for(int i=0;i<tab.length;i++)
+        {
+            if(jeSteviloDeljivoS3in4(tab[i]))
+            {
+                vs=vs+tab[i];
+            }
+        }
+        return vs;
+    }
+    public static void main(String[] args) {
+        Scanner vhod = new Scanner(System.in);
+        int[]tab=new int[10];
+        for(int i=0;i<tab.length;i++)
+        {
+            tab[i]=(int)(Math.random()*(100-0)+0);
+        }
+        for(int i=0;i<tab.length;i++)
+        {
+            System.out.print(tab[i]+" ");
+        }
+        System.out.println();
+        System.out.println(vsotaStevilTab(tab));
+    }
+}
