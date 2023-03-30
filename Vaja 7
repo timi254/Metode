@@ -1,0 +1,27 @@
+import java.util.*;
+public class Naloga7 {
+    public static boolean isStevka(int x){
+        while(x>0)
+        {
+            if(x%10==6)
+            {
+                return true;
+            }
+        x=x/10;
+        }
+        return false;
+    }
+    public static void izpisStevil(int a,int b){
+        for(int i=a;i<=b;i++)
+        {
+            if(isStevka(i))
+            {
+                System.out.println(i);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        Scanner vhod = new Scanner(System.in);
+        izpisStevil(0, 20);
+    }
+}
