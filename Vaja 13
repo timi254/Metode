@@ -1,5 +1,5 @@
 public class Naloga13 {
-    public static String Najdaljsi(String[]tab){
+    public static int Najdaljsi(String[]tab){
         int poz = 0;
         String najdaljsi="";
         for(int i=0;i<tab.length;i++)
@@ -8,12 +8,13 @@ public class Naloga13 {
             if(tab[i].length()>najdaljsi.length())
             {
                 najdaljsi=tab[i];
+                poz=i;
             }
         }
-        return najdaljsi;
+        return poz;
     }
     public static void main(String[] args) {
-        String[]tab={"jvreijvbireihvb","fuzzrhzhrv","grgrefefg","rhejgwuhfhbr","vrhcwnvrunb","firjigbhrubnrb"};
+        String[]tab={"jvreijvbireihvb","fuzzrhzhrv","grgrefefffffffffffg","rhejgwuhfhbr","vrhcwnvrunffffffffffffffffb","firjigbhrubnrb"};
         System.out.println(Najdaljsi(tab));
     }
 }
