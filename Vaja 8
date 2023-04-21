@@ -1,0 +1,35 @@
+public class Naloga8 {
+    public static boolean isStevka(int x){
+        while(x>0)
+        {
+            if(x%10==6)
+            {
+                return true;
+            }
+        x=x/10;
+        }
+        return false;
+    }
+    public static void tabela(int[]tab){
+        for(int i=0;i<tab.length;i++)
+        {
+            if(isStevka(tab[i]))
+            {
+                System.out.println(tab[i]);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int[]tab=new int[10];
+        for(int i=0;i<tab.length;i++)
+        {
+            tab[i]=(int)(Math.random()*(100-0)+0);
+        }
+        for(int i=0;i<tab.length;i++)
+        {
+            System.out.print(" "+tab[i]);
+        }
+        System.out.println();
+        tabela(tab);
+    }
+}
